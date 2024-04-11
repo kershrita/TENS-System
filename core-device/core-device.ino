@@ -7,21 +7,17 @@
 #define channel2Inc 8
 #define channel2Dec 9
 
-struct Variables{
-  const String modes[6] = {"TENS asymmetrical",
-                    "Microcurrent", 
-                    "Diadynamic", 
-                    "NMS Burst", 
-                    "IFC-Int-etferential", 
-                    "Russain"};
-  const String frequency[2] = {"LF", "IF"};
-};
+const String modes[6] = {"TENS asymmetrical",
+                  "Microcurrent", 
+                  "Diadynamic", 
+                  "NMS Burst", 
+                  "IFC-Int-etferential", 
+                  "Russain"};
 
-Variables data;
+
 
 int t = 0;
 String m = "NULL"; int idxm = 0;
-String f = data.frequency[0]; int idxf = 0;
 
 int channel1Frequency = 0;
 int channel2Frequency = 0;
@@ -61,7 +57,7 @@ void loop() {
       case 'm':  // Command for mode adjustment
         digitalWrite(adjustMode, HIGH);
         if (idxm > 5) {idxm = 0;}
-        m = data.modes[idxm];
+        m = modes[idxm];
         Serial.print("Mode: ");
         Serial.println(m);
 
@@ -74,11 +70,6 @@ void loop() {
 
       case 'f':  // Command for frequency mode adjustment
         digitalWrite(adjustFrequency, HIGH);
-        if (idxf > 1) {idxf = 0;}
-        idxf++;
-        f = data.frequency[idxf];
-        Serial.print("Frequency Mode: ");
-        Serial.println(f);
         
         delay(100);
         

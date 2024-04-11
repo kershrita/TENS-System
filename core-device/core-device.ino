@@ -4,6 +4,8 @@
 #define adjustCycle 5
 #define channel1Inc 6
 #define channel1Dec 7
+#define channel2Inc 8
+#define channel2Dec 9
 
 struct Variables{
   const String modes[6] = {"TENS asymmetrical",
@@ -13,7 +15,6 @@ struct Variables{
                     "IFC-Int-etferential", 
                     "Russain"};
   const String frequency[2] = {"LF", "IF"};
-  const String cycle[3] = {"IDle", "Running", "Switching"};
 };
 
 Variables data;
@@ -21,9 +22,9 @@ Variables data;
 int t = 0;
 String m = "NULL"; int idxm = 0;
 String f = data.frequency[0]; int idxf = 0;
-String c = data.cycle[0]; int idxc = 0;
 
 int channel1Frequency = 0;
+int channel2Frequency = 0;
 
 void setup() {
   Serial.begin(9600);           // Serial monitor for debugging
@@ -59,7 +60,7 @@ void loop() {
         
       case 'm':  // Command for mode adjustment
         digitalWrite(adjustMode, HIGH);
-        if (idxm < 6) {idxm = 0;}
+        if (idxm > 5) {idxm = 0;}
         m = data.modes[idxm];
         Serial.print("Mode: ");
         Serial.println(m);
@@ -73,12 +74,11 @@ void loop() {
 
       case 'f':  // Command for frequency mode adjustment
         digitalWrite(adjustFrequency, HIGH);
-        if (idxf < 2) {idxf = 0;}
+        if (idxf > 1) {idxf = 0;}
+        idxf++;
         f = data.frequency[idxf];
         Serial.print("Frequency Mode: ");
         Serial.println(f);
-
-        idxf++;
         
         delay(100);
         
@@ -87,12 +87,6 @@ void loop() {
 
       case 'c':  // Command to start the cycle
         digitalWrite(adjustCycle, HIGH);
-        if (idxc < 2) {idxc = 0;}
-        c = data.cycle[idxc];
-        Serial.print("Device: ");
-        Serial.println(c);
-
-        idxc++;
 
         delay(100);
         
@@ -121,6 +115,30 @@ void loop() {
         
         delay(100);
         digitalWrite(channel1Dec, LOW);
+        break;
+
+        case '+':  // Command to increase frequency for channel 1
+        channel2Frequency = min(channel2Frequency + 1, 16);
+        
+        digitalWrite(channel2Inc, HIGH);
+        
+        Serial.print("Channel 2 Strength: ");
+        Serial.println(channel2Frequency);
+       
+        delay(100);
+        digitalWrite(channel2Inc, LOW);
+        break;
+        
+      case '-':  // Command to decrease frequency for channel 1
+        channel2Frequency = max(channel2Frequency - 1, 0);
+        
+        digitalWrite(channel2Dec, HIGH);
+        
+        Serial.print("Channel 2 Strength: ");
+        Serial.println(channel2Frequency);
+        
+        delay(100);
+        digitalWrite(channel2Dec, LOW);
         break;
     }
   }

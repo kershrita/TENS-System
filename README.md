@@ -19,7 +19,7 @@
 
 ---
 
-## 📖 Overview
+## Overview
 
 The **TENS-System** is an open-source hardware and software project for building a Transcutaneous Electrical Nerve Stimulation (TENS) device. TENS therapy uses low-voltage electrical currents to provide pain relief by stimulating nerves through the skin.
 
@@ -30,7 +30,7 @@ This project provides everything you need to build your own TENS device, includi
 
 > ⚠️ **Disclaimer**: This project is intended for educational and research purposes only. It should not be used as a substitute for professional medical devices. Always consult with healthcare professionals before using any electrical stimulation device.
 
-## ✨ Features
+## Features
 
 - **Multiple Therapy Modes**:
   - TENS Asymmetrical
@@ -49,7 +49,7 @@ This project provides everything you need to build your own TENS device, includi
 - **Serial/Bluetooth Control**: Control the device via serial commands or Bluetooth module
 - **3D Printable Enclosure**: Custom-designed cases for both core and chest units
 
-## 🔧 Hardware Requirements
+## Hardware Requirements
 
 ### Core Components
 | Component | Description | Quantity |
@@ -77,13 +77,13 @@ Pin 8       | Channel 2 Increase
 Pin 9       | Channel 2 Decrease
 ```
 
-## 💻 Software Requirements
+## Software Requirements
 
 - [Arduino IDE](https://www.arduino.cc/en/software) (version 1.8.x or later)
 - USB drivers for your Arduino board
 - (Optional) Bluetooth terminal app for wireless control
 
-## 🚀 Installation
+## Installation
 
 ### 1. Clone the Repository
 
@@ -106,7 +106,7 @@ cd TENS-System
 3. (Optional) Connect Bluetooth module to TX/RX pins
 4. Print and assemble the 3D enclosure
 
-## 📱 Usage
+## Usage
 
 ### Serial Commands
 
@@ -134,7 +134,7 @@ Control the TENS device by sending single-character commands via Serial Monitor 
 | **IFC** | Interferential current therapy | Deep tissue stimulation |
 | **Russian** | High-frequency bursts | Muscle rehabilitation |
 
-## 🖨️ 3D Printed Enclosure
+## 3D Printed Enclosure
 
 The `3d parts/` directory contains STL files for printing custom enclosures:
 
@@ -151,7 +151,7 @@ The `3d parts/` directory contains STL files for printing custom enclosures:
 - **Infill**: 20-30%
 - **Supports**: May be required for some parts
 
-## 📸 Project Images
+## Project Images
 
 <p align="center">
   <img src="images/IMG-20231104-WA0037.jpg" alt="TENS System View 1" width="250"/>
@@ -178,27 +178,11 @@ Contributions are welcome! Here's how you can help:
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👤 Author
+## Author
 
 **Ashraf Abdulkhaliq**
 - GitHub: [@kershrita](https://github.com/kershrita)
-
-## 🙏 Acknowledgments
-
-- The open-source hardware community
-- Arduino project and community
-- Contributors and testers
-
----
-
-<p align="center">
-  Made with ❤️ for the open-source community
-</p>
-
-<p align="center">
-  ⭐ Star this repository if you find it helpful!
-</p>

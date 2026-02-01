@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing to the TENS-System project! This document provides guidelines and information for contributors.
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Code of Conduct](#code-of-conduct)
 - [How Can I Contribute?](#how-can-i-contribute)
@@ -12,7 +12,7 @@ Thank you for your interest in contributing to the TENS-System project! This doc
 - [Style Guidelines](#style-guidelines)
 - [Reporting Issues](#reporting-issues)
 
-## 📜 Code of Conduct
+## Code of Conduct
 
 By participating in this project, you agree to maintain a respectful and inclusive environment. Please:
 
@@ -21,7 +21,7 @@ By participating in this project, you agree to maintain a respectful and inclusi
 - Accept constructive criticism gracefully
 - Focus on what is best for the community
 
-## 🤝 How Can I Contribute?
+## How Can I Contribute?
 
 ### Types of Contributions
 
@@ -54,7 +54,7 @@ By participating in this project, you agree to maintain a respectful and inclusi
    - Help other users
    - Share the project
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -78,7 +78,7 @@ Before contributing, ensure you have:
    git remote add upstream https://github.com/kershrita/TENS-System.git
    ```
 
-## 💻 Development Setup
+## Development Setup
 
 ### Arduino Development
 
@@ -97,7 +97,7 @@ For 3D enclosure contributions:
 - Test prints before submitting
 - Include printing parameters in your PR
 
-## 📤 Submitting Changes
+## Submitting Changes
 
 ### Branch Naming
 
@@ -150,7 +150,7 @@ Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
 
 6. **Respond to feedback** and make requested changes
 
-## 📝 Style Guidelines
+## Style Guidelines
 
 ### Arduino/C++ Code
 
@@ -183,7 +183,7 @@ int s = 0;
 - Include basic dimensions in file names if helpful
 - Provide printing parameters in comments or separate file
 
-## 🐛 Reporting Issues
+## Reporting Issues
 
 When reporting bugs, please include:
 
@@ -224,7 +224,7 @@ When reporting bugs, please include:
 [Any other relevant information]
 ```
 
-## ❓ Questions?
+## Questions?
 
 If you have questions about contributing:
 
@@ -232,7 +232,7 @@ If you have questions about contributing:
 2. Open a new issue with the "question" label
 3. Reach out to the maintainers
 
-## 🙏 Thank You!
+## Thank You!
 
 Your contributions help make this project better for everyone. Whether it's fixing a typo, adding a feature, or improving documentation - every contribution matters!
 
